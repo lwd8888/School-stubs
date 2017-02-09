@@ -1,0 +1,22 @@
+*{margin: 0;padding: 0;list-style: none;}
+#Top{width: 100%;height: 250px;background: #ee1c24;position: relative;}
+#Top .TopCon{width: 1150px;height: 30px;margin:0px auto;}
+#Top .TopCon .search{width: 0px;height: 30px;float:right;position: relative;overflow: hidden;}
+#Top .TopCon a{width: 30px;height: 16px;float: right;font-size: 12px;color: #e3e3e3;text-decoration: none;padding: 8px 0 0 20px;}
+#Top .TopCon a:hover{color: #fff;}
+#Top .TopCon img.seaImg{float: right;padding-top:8px;}
+#Top .TopCon .search input.seaTxt{width:230px;height: 20px;line-height: 20px;background: #fff;border:0px;border-radius: 5px;position: absolute;left: 0;top: 5px;text-indent:30px ;}
+#Top .TopCon .search input.seaBut{width: 30px;height: 20px;background: url(../images/search2.gif)no-repeat center;border: 0px;position: absolute;left: 0;top: 5px;}
+#Top .TopCon .search label.txt{position: absolute;font-size: 12px;left: 35px;top: 8px;color: #c1c1c1;}
+#Top .zhongj{width:250px;height: 80px;margin-left: 45%;margin-top:3%;}
+#Top .xia{width:100%;background:#c6171e;height:80px;position: absolute;bottom: 0;}
+#Top .xia .dadiv{width: 84%;margin-left: 15%;height: 100%;overflow: hidden;}
+#Top .xia .dadiv ul li span{top:20px;position: absolute;font-size: 22px;font-weight: bold;}
+#Top .xia .dadiv ul li .bdo{left: -20px;}
+#Top .xia .dadiv ul li{float: left;width:175px;height:70px;margin-left: 20px;position: relative;color:#fff;}
+#Top .xia .dadiv .ad a,#Top .xia .dadiv .ad1 a{display: inline-block;margin-bottom: 10px;margin-left: 16px;font-size:14px;color:#fff;text-decoration: none;}
+#Top .xia .dadiv .ad{width:130px;height:70px;float: right;margin-top:15px;}
+#Top .xia .dadiv .ad1{width:150px;height:70px;float: right;margin-top:15px;}
+.ftu{background:url(../images/new.gif)no-repeat center center ;display: inline-block;width:25px;height: 12px;position:absolute;right:34px;top:0px;opacity:1;}
+.ftu1{background:url(../images/new2.gif)no-repeat center center ;display: inline-block;width:25px;height: 12px;position:absolute;right:34px;top:0px;opacity: 0;}
+.ttuu{position:relative;left:60px;top:40px;}

@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Nav{ width:35px;
+height:100%;
+background:#000;
+position:fixed;
+right:0px;
+top:0px;}
+
+#Nav .top{ width:35px;
+	height:150px;
+	background:#d8002d;
+	padding-top:70px;
+	position:relative;}
+#Nav .top .email{
+	position:absolute;
+	right:0px;
+	bottom:0px;}
+#Nav .middle{ width:35px;
+	height:310px;
+	background:#000;
+	z-index: -10;}
+img{ display:block;}
+#Nav  ul{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0px;
+}
+#Nav  ul li{ list-style-type:none;
+	font-family:"微软雅黑";
+	width:35px;
+	
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	position:relative;}
+	/*position: fixed ;
+	right: 0px;*/
+/*#Nav .middle  ul li span{ width:90px; height:35px; background:#aaa; display: block; line-height:35px; position:absolute; top:0px;-90px; }
+#Nav .middle ul li span font{ color:#aaa; font-size:16px; font-family:"宋体";
+position:absolute;
+right:-8px;
+top:5px;}
+#Nav .middle ul li{ list-style-type:none; font-family:"微软雅黑"; width:35px;
+font-size:12px; color:#fff; text-align:center; position:relative;}*/
+#Nav ul li span{ width:90px; height:35px; background:#aaaaaa; display:block; line-height:35px; position:absolute; top:0px;left: -120px; opacity: 0;}
+#Nav ul li span font{ color:#aaaaaa; font-size:16px; font-family:"宋体"; position:absolute; right:-8px; top:5px;}
+#Nav ul li.go{ border-top:1px solid #aaa; padding-bottom:5px;}
+#Nav ul li.hover{ background:#ff0066;}
+#Nav .bottom{ width:35px;
+	height:110px;
+	background:#AAAAAA;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}

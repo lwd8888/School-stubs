@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">		
+		<title></title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+	</head>
+	<body>
+		<div data-role="page"id="index">
+			<div data-role="header"data-position="fixed">
+				<h1>我是头部</h1>
+			</div>
+			<div data-role="main"data-position="fixed"class="ui-content">
+				<div class="ui-field-contain">
+					<label>手机号</label>
+					<input type="text"name=""id="tel"placeholder="请输入合法手机号">
+				</div>
+				<input type="button"value="查询"id="search-submit">
+				<ul data-role = "listview" data-inset = "true"id="list" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+			
+				</ul>
+			</div>
+			<div data-role="footer"data-position="fixed">
+				<div data-role="navbar"data-iconpos = "top">
+					<ul>
+						<li><a href="#"data-icon = "phone"class="ui-btn-active">手机</a></li>
+						<li><a href="#"data-icon = "cloud">天气</a></li>
+						<li><a href="#"data-icon = "grid">其他</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	<!--<script type="text/javascript" src="js/jquery-1.10.1.min.js" ></script>-->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+	<script>
+		var url="http://cors.itxti.net/?ws.webxml.com.cn/WebServices/MobileCodeWS.asmx/getMobileCodeInfo?userID="
+//		var url="http://apis.baidu.com/apistore/mobilenumber/mobilenumber?userID="
+		var gettelinfo=function(){
+			var tel=$("#tel").val();
+			var list=$("#list");
+			if(tel){
+				var pattern=/^1[3|5][0-9]\d{4,8}$/;
+				if(pattern.test(tel)){
+					var searchBtn=$(this);
+					searchBtn.button('disable')
+					$.mobile.loading('show',{text:'查询中...',textVisible:true});
+				$.get(url,{'mobileCode':tel},function(data){
+					list.html("<span style='color:red'>"+$(data).find('string').text()+"</span>");
+					list.listview('refresh');
+					$.mobile.loading('hide');
+					searchBtn.button('enable')
+				})
+				}else{
+				list.html("<span style='color:red;'>你输入的号码不合法</span>")	
+				}
+			}else{
+				list.html("<span style='color:red;'>请输入你要查询的号码</span>")
+			}
+		}
+		var bindevert=function(){
+			$("#search-submit").on("click",gettelinfo);
+		}
+		$(document).on("pagecreate","#index",function(){
+			bindevert();
+		})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

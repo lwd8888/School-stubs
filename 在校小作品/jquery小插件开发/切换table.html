@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/qiehuantable.js" ></script>
+		<style>
+			body{margin: 50px;}
+			*{padding: 0;margin: 0;}
+			.tabNav{list-style: none;}
+			.tabNav li{float: left;width:150px;height: 26px;line-height: 26px;text-align: center;margin-right: 3px;border: 1px solid #ABCDEF;border-bottom: none;}
+			.tabNav li.current{background: #ABCDEF;color: #fff;font-weight: 700;}
+			.tabContent{clear: both;}
+			.tabContent div{border: 1px solid #ABCDEF;display: none;width:500px;height: 200px;}
+		</style>
+		<script>
+			$(function(){
+			$(".tab").tab();
+			$(".tab1").tab();
+//				$(".tab").tab({
+//					eventType:'mouseover'
+//				}).find('.tabNav>li').css('background','red');
+			})
+		</script>
+	</head>
+	<body>
+	<div class="tab">
+			<ul class="tabNav">
+				<li class="current">html</li>
+				<li>css</li>
+				<li>javascript</li>
+			</ul>
+		<div class="tabContent">
+			<div style="display: block;">html</div>
+			<div>css</div>
+			<div>javascript</div>
+		</div>
+	</div>
+	<div class="tab1">
+			<ul class="tabNav">
+				<li class="current">html</li>
+				<li>css</li>
+				<li>javascript</li>
+			</ul>
+		<div class="tabContent">
+			<div style="display: block;">html</div>
+			<div>css</div>
+			<div>javascript</div>
+		</div>
+	</div>
+	</body>
+</html>
